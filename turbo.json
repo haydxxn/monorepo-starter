@@ -1,0 +1,20 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "dangerouslyDisablePackageManagerCheck": true,
+  "ui": "tui",
+  "tasks": {
+    "test": {
+      "inputs": ["**/*.{ts,tsx,js,jsx}"]
+    },
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["src/**", "package.json"],
+      "outputs": ["build/**", "node_modules/.cache/metro/**"]
+    },
+    "dev": {
+      "cache": false,
+      "interactive": true,
+      "persistent": true
+    }
+  }
+}

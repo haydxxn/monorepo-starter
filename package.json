@@ -4,8 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "pnpm --filter my-app start",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "turbo dev",
+    "dev:mobile": "turbo run dev --filter=my-app",
+    "dev:backend": "turbo run dev --filter=backend",
+    "build": "turbo build",
+    "test": "turbo test"
+  },
+  "devDependencies": {
+    "turbo": "^2.5.8"
   },
   "keywords": [],
   "author": "",
